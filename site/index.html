@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My Desktop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wallpaper"></div>
+
+<header id="menubar">
+  <div class="mb-left">
+    <button id="homeBtn" class="mb-item mb-logo" aria-label="홈 메뉴">
+      <svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 3.2 2.5 11.1a.9.9 0 0 0 1.15 1.38L5 11.36V19a1.8 1.8 0 0 0 1.8 1.8h3.4v-5.4h3.6v5.4h3.4A1.8 1.8 0 0 0 19 19v-7.64l1.35 1.12a.9.9 0 0 0 1.15-1.38Z"/></svg>
+    </button>
+    <span id="activeTitle" class="mb-item mb-bold">Finder</span>
+    <button class="mb-item mb-hide-sm" data-menu="profile">프로필</button>
+    <button class="mb-item mb-hide-sm" data-menu="wallpaper">배경화면</button>
+  </div>
+  <div class="mb-right">
+    <span id="clock" class="mb-item"></span>
+  </div>
+  <div id="homeMenu" class="dropdown" hidden>
+    <button data-act="home">홈 화면으로</button>
+    <button data-act="profile">프로필</button>
+    <hr>
+    <button data-act="wallpaper">배경화면 변경…</button>
+    <button data-act="closeAll">모든 창 닫기</button>
+  </div>
+</header>
+
+<main id="desktop">
+  <div id="rightSide">
+    <div id="desktopIcons"></div>
+    <div id="widgets"></div>
+  </div>
+  <div id="windows"></div>
+</main>
+
+<div id="ctxMenu" class="dropdown" hidden>
+  <button data-act="wallpaper">배경화면 변경…</button>
+  <button data-act="home">모든 창 최소화</button>
+</div>
+
+<div id="dockZone"></div>
+<nav id="dockWrap">
+  <div id="dock"></div>
+</nav>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
